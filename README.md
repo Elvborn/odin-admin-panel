@@ -1,1 +1,2 @@
 # odin-admin-panel
+This is a TOP project (The Odin Project). In this project i will try to replicate the design in admin-panel-design.png. I will be using both grid/flexbox layout, to practice and demonstrate my current skills using these methods.
