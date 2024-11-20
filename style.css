@@ -99,7 +99,7 @@ body{
 
 #header-buttons button:hover{
     cursor: pointer;
-    background-color: color-mix(in srgb, var(--primary-color) 90%, white 10% );
+    background-color: color-mix(in srgb, var(--primary-color) 90%, white 20% );
 }
 
 #header-buttons > button{
@@ -114,6 +114,8 @@ body{
 }
 
 #side-panel{
+    --side-panel-gap:2rem;
+
     grid-row: 1 / 3;
 
     padding: 10px;
@@ -121,32 +123,51 @@ body{
     color: white;
     font-weight: bold;
 
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 100px repeat(11, 1.5rem);
-    align-items: center;
-    gap: .8rem;
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--side-panel-gap);
 }
 
-#side-panel .logo{
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#logo img{
     width: 3rem;
 }
 
-#side-panel > .logo-text{
+#logo > p{
     font-size: 2rem;
+    color:white;
 }
 
-#side-panel a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-}
-
-#side-panel > .icon{
+#side-panel .icon{
     width: var(--icon-size);
     justify-self: center;
     filter: invert(1);
 }
+
+#side-panel-menu{
+    display: grid;
+    gap: var(--side-panel-gap);
+}
+
+#side-panel-menu a{
+    padding: .5rem 1rem;
+    color: white;
+
+    display: flex;
+    gap: 20px;
+}
+
+#side-panel-menu a:hover{
+    background-color: color-mix(in srgb, var(--primary-color) 90%, white 20% );
+}
+
 
 #container{
     --content-radius:.5rem;
